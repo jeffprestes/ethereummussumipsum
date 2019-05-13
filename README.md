@@ -2,9 +2,9 @@
 
 # Ethereum Mussum Ipsum
 
-*EN* - Creating Elliptic Curve private and public keys and Ethereum accounts using genial phrases of Mussum, a great Brazilian philosopher
+*EN* - Creating Elliptic Curve private and public keys and Ethereum accounts using genial phrases of Mussum, a great Brazilian philosopher. Please after run it look at the code source to understand the example in details.
 
-*PT* - Criando chaves publicas e privadas usando algoritmo de curva eliptica e também contas no Blockchain do Ethereum. E o mais legal: usando como palavras sementes frases do nosso grande filósofo Mussum.
+*PT* - Criando chaves publicas e privadas usando algoritmo de curva eliptica e também contas no Blockchain do Ethereum. E o mais legal: usando como palavras sementes frases do nosso grande filósofo Mussum. Depois de executá-lo, veja o código fonte para entender como funciona com mais detalhes.
 
 ## To build / Para gerar o Binário
 
