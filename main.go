@@ -48,7 +48,7 @@ func main() {
 
 	fmt.Printf("\n*******************************************\n")
 	fmt.Printf("Cacildis! We have the keys... (BTW, we're using secp256k1 curve and Keccak256 hash algorithim)\n\n")
-	fmt.Println("Private key selected ", privateKey)
+	fmt.Printf("Private key selected [%s] - It was trimmed because a key must have 32 characters only\n", privateKey)
 	fmt.Println("Private key in Hexadecimal ", privateKeyHex)
 	fmt.Printf("Private key object ECDSA %+v\n", privateKeyHexECDSA)
 	fmt.Printf("Public key object %+v\n", publicKey)
