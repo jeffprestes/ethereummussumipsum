@@ -31,6 +31,10 @@ func main() {
 
 	privateKey := chavisDasPrivadis[numerisAletatoris][:32]
 	privateKeyHex := hex.EncodeToString([]byte(privateKey))
+	//If you want to get your Public Key from your Metamask or other Ethereum wallet
+	//Get your private key from your wallet copy it from your wallet uncomment the line bellow and
+	//copy it within the variable
+	//privateKeyHex = ""
 	privateKeyHexECDSA, err := crypto.HexToECDSA(privateKeyHex)
 	if err != nil {
 		log.Fatal("Error getting private key in ECDSA format", err)
