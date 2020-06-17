@@ -29,6 +29,13 @@ func main() {
 	chavisDasPrivadis[6] = "A ordem dos tratores não altera o pão duris"
 	chavisDasPrivadis[7] = "Copo furadis é disculpa de bebadis"
 
+	fmt.Printf("\n\n\n")
+	fmt.Println("Aê cumpadis, the options are: ")
+	for index, cdp := range chavisDasPrivadis {
+		fmt.Println("   ", index, cdp)
+	}
+	fmt.Printf("\n\nThe choosen one is... %d\n\n", numerisAletatoris)
+
 	privateKey := chavisDasPrivadis[numerisAletatoris][:32]
 	privateKeyHex := hex.EncodeToString([]byte(privateKey))
 	//If you want to get your Public Key from your Metamask or other Ethereum wallet
@@ -50,15 +57,20 @@ func main() {
 	publicKeyAfterHashString := hexutil.Encode(publicKeyAfterHash)
 	yourEthereumAddress := crypto.PubkeyToAddress(*publicKeyECDSA)
 
-	fmt.Printf("\n*******************************************\n")
 	fmt.Printf("Cacildis! We have the keys... (BTW, we're using secp256k1 curve and Keccak256 hash algorithim)\n\n")
-	fmt.Printf("Private key selected [%s] - It was trimmed because a key must have 32 characters only\n", privateKey)
+	fmt.Printf("Private key selected [%s] - It was trimmed because a key must have 32 characters only\n\n", privateKey)
 	fmt.Println("Private key in Hexadecimal ", privateKeyHex)
+	fmt.Println("")
 	fmt.Printf("Private key object ECDSA %+v\n", privateKeyHexECDSA)
-	fmt.Printf("Public key object %+v\n", publicKey)
+	fmt.Println("")
+	//fmt.Printf("Public key object %+v\n", publicKey)
+	//fmt.Println("")
 	fmt.Printf("Public key object ECDSA %+v\n", publicKeyECDSA)
+	fmt.Println("")
 	fmt.Println("Public Key in Hex ", publicKeyInHex)
+	fmt.Println("")
 	fmt.Println("Public Key Hash used to generate Ethereum address ", publicKeyAfterHashString)
-	fmt.Println("Your Ethereum address ", yourEthereumAddress.String())
+	fmt.Println("")
+	fmt.Println("Your Ethereum address is ", yourEthereumAddress.String())
 	fmt.Printf("\nNow publish this text in twitter to poke Vitalik and ask him some ethers: 'Ai, Vitalik gente finis, manda uns ethes pra nois compra uns mé https://etherscan.io/address/%s\n\n", yourEthereumAddress.String())
 }
