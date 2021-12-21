@@ -2,5 +2,5 @@ ethereummussumipsum
 
 *.csv
 
-credentials*
-tokens*
+credentials.json
+token.json
