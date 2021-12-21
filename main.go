@@ -40,7 +40,7 @@ func init() {
 
 func main() {
 	fmt.Printf("\n\nGenerating private keys...\n")
-	err := randomNameGenerator(PREFIX_NAME, keyNames, 10)
+	err := randomNameGenerator(PREFIX_NAME, keyNames, 250)
 	if err != nil {
 		log.Fatalf("\n%s\n", err.Error())
 		return
@@ -61,7 +61,7 @@ func main() {
 	if err != nil {
 		log.Fatalln("Error generating keys...", err.Error())
 	}
-	log.Println("File generated!")
+	fmt.Printf("\n\nFile generated!")
 }
 
 func generateCSVFile(source map[string]ReceiverAccount, filePath string) (err error) {
