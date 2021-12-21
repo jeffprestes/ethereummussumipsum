@@ -14,7 +14,6 @@ import (
 )
 
 func main() {
-
 	fontisAleatoris := rand.NewSource(time.Now().UnixNano())
 	aleatorisComoDepoisDeUnsMe := rand.New(fontisAleatoris)
 	numerisAletatoris := aleatorisComoDepoisDeUnsMe.Intn(7)
@@ -36,12 +35,16 @@ func main() {
 	}
 	fmt.Printf("\n\nThe choosen one is... %d\n\n", numerisAletatoris)
 
-	privateKey := chavisDasPrivadis[numerisAletatoris][:32]
+	// privateKey := chavisDasPrivadis[numerisAletatoris][:32]
+	privateKey := "PalmeirasTemChanceDeGanharMudial"
+	if len(privateKey) != 32 {
+		log.Panicln("Private key invalid. Length: ", len(privateKey))
+	}
 	privateKeyHex := hex.EncodeToString([]byte(privateKey))
-	//If you want to get your Public Key from your Metamask or other Ethereum wallet
-	//Get your private key from your wallet copy it from your wallet uncomment the line bellow and
-	//copy it within the variable
-	//privateKeyHex = ""
+	// If you want to get your Public Key from your Metamask or other Ethereum wallet
+	// Get your private key from your wallet copy it from your wallet uncomment the line bellow and
+	// copy it within the variable
+	// privateKeyHex = ""
 	privateKeyHexECDSA, err := crypto.HexToECDSA(privateKeyHex)
 	if err != nil {
 		log.Fatal("Error getting private key in ECDSA format", err)
@@ -63,8 +66,8 @@ func main() {
 	fmt.Println("")
 	fmt.Printf("Private key object ECDSA %+v\n", privateKeyHexECDSA)
 	fmt.Println("")
-	//fmt.Printf("Public key object %+v\n", publicKey)
-	//fmt.Println("")
+	// fmt.Printf("Public key object %+v\n", publicKey)
+	// fmt.Println("")
 	fmt.Printf("Public key object ECDSA %+v\n", publicKeyECDSA)
 	fmt.Println("")
 	fmt.Println("Public Key in Hex ", publicKeyInHex)
