@@ -61,7 +61,7 @@ func main() {
 	if err != nil {
 		log.Fatalln("Error generating keys...", err.Error())
 	}
-	fmt.Printf("\n\nFile generated!")
+	fmt.Printf("\n\nFile generated!\n\n")
 }
 
 func generateCSVFile(source map[string]ReceiverAccount, filePath string) (err error) {
